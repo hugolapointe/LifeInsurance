@@ -8,7 +8,7 @@ public class Applicant {
     public ChronicDisease Diseases { get; init; }
 
     public decimal BMI => WeightKg / (HeightM * HeightM);
-    public bool IsUnderweight => BMI >= 18.5m;
+    public bool IsUnderweight => BMI < 18.5m;
     public bool IsObese => BMI >= 30m;
     public bool IsElderly => Age > 75;
     public bool HasDiabetes => Diseases.HasFlag(ChronicDisease.Diabetes);

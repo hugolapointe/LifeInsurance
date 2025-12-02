@@ -3,13 +3,12 @@ using LifeInsurance.Core.Models;
 namespace LifeInsurance.Core.Rules;
 
 public class AgeRule : EligibilityRule {
-    // Règles métier pour l'âge
+
     private const int MinimumAge = 18;
     private const int MaximumAge = 100;
 
     private const decimal ElderlySurchargeFactor = 0.15m;
 
-    // Raisons de rejet
     private const string BelowMinimumAgeReason = "Applicant must be at least 18 years old";
     private const string AboveMaximumAgeReason = "Applicant must be under 100 years old";
 

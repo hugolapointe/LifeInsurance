@@ -7,9 +7,9 @@ public class EligibilityService {
     private readonly List<EligibilityRule> Rules = [
             new AgeRule(),
             new ChronicDiseaseRule(),
+            new HighRiskRule(),  // MOVED: Évaluer les combinaisons AVANT les surcharges
             new SmokerRule(),
-            new BmiRule(),
-            new HighRiskRule()
+         new BmiRule()
         ];
 
     public EligibilityResult Evaluate(Applicant applicant) {
